@@ -409,32 +409,17 @@ header{
   position: relative;
   top: 100px;
   background-color: #f9f9f9;
-  float: left;
 
 }
-
-.priceList_package_2 {
-  height: 500px;
-  width: 327px;
-  border: 2px solid #27c7ab;
-  display: inline-block;
-  margin: 100px 0;
-  position: relative;
-  left: 39px;
-  background-color: #27c7ab;
-  float:inherit;
-
+.priceList_package_1:first-child{
+  float:left;
 }
-.priceList_package_3 {
-  height: 500px;
-  width: 327px;
-  border: 2px solid #c2c2c2;
-  display: inline-block;
-  margin: 100px 0;
-  position: relative;
-  background-color: #f9f9f9;
+.priceList_package_1:last-child{
   float: right;
-
+}
+.priceList_package_1:nth-child(2n){
+  position: relative;
+  left: 37px;
 }
 
 .priceList_package_bullet{
@@ -450,30 +435,11 @@ header{
   top: -40px;
 
 }
-.priceList_package_bullet_2{
-  height: 57px;
-  width: 57px;
-  border-radius: 100%;
-  background-color: white;
-  border: 15px solid #27c7ab;
-  border-style:inherit;
-  box-shadow: 0 0 0 2px #27c7ab;
-  position: absolute;
-  left: 135px;
-  top: -40px;
-
-}
 
 .priceList_package_bullet_h1{
   line-height: 90px;
   font-size: 25px;
   color: #27c7ab;
-  text-align: center;
-}
-.priceList_package_bullet_h1_2{
-  line-height: 90px;
-  font-size: 25px;
-  color: white;
   text-align: center;
 }
 
@@ -585,6 +551,28 @@ header{
   background-color: white;
 
 }
+
+/************ Klikalne pakiety  ****************/
+.priceList_package_1:hover {
+  background-color: #27c7ab;
+  border: 2px solid #27c7ab;
+}
+
+.priceList_package_1:hover .priceList_package_bullet {
+  background-color: white;
+  border: 15px solid #27c7ab;
+  box-shadow: 0 0 0 2px #27c7ab;
+}
+
+.priceList_package_1:hover .priceList_package_btn{
+  background-color: white;
+  color: #27c7ab;
+}
+.priceList_package_1:hover h1 {
+  color: white;
+}
+
+
 
 /*Formularz*/
 #form {
