@@ -3,27 +3,27 @@
 }
 
 html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font-weight: normal;
-	vertical-align: baseline;
-	background: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
 }
 
 main, article, aside, figure, footer, header, nav, section, details, summary {display: block;}
 
 /* Handle box-sizing while better addressing child elements:
-   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 /* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
@@ -35,11 +35,11 @@ object,
 embed {max-width: 100%;}
 
 /*
-   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
-	In fact, it *will* cause problems with Google Maps' controls at small size.
-	If this is the case for you, try uncommenting the following:
+Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+In fact, it *will* cause problems with Google Maps' controls at small size.
+If this is the case for you, try uncommenting the following:
 #map img {
-		max-width: none;
+max-width: none;
 }
 */
 
@@ -47,8 +47,8 @@ embed {max-width: 100%;}
 html {overflow-y: scroll;}
 
 /* we use a lot of ULs that aren't bulleted.
-	you'll have to restore the bullets within content,
-	which is fine because they're probably customized anyway */
+you'll have to restore the bullets within content,
+which is fine because they're probably customized anyway */
 ul {list-style: none;}
 
 blockquote, q {quotes: none;}
@@ -74,10 +74,10 @@ hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 
 input, select {vertical-align: middle;}
 
 pre {
-    white-space: pre; /* CSS2 */
-    white-space: pre-wrap; /* CSS 2.1 */
-    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
-    word-wrap: break-word; /* IE */
+  white-space: pre; /* CSS2 */
+  white-space: pre-wrap; /* CSS 2.1 */
+  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word; /* IE */
 }
 
 input[type="radio"] {vertical-align: text-bottom;}
@@ -122,7 +122,7 @@ input[type=button] {width: auto; overflow: visible;}
 .ie7 img {-ms-interpolation-mode: bicubic;}
 
 /* prevent BG image flicker upon hover
-   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+(commented out as usage is rare, and the filter syntax messes with some pre-processors)
 .ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
 */
 
@@ -181,6 +181,7 @@ header{
   background-color: black;
   color: white;
   position: absolute;
+  left: 66%;
   top: 50px;
   margin-left: 10px;
   padding-left: 12px;
@@ -188,6 +189,7 @@ header{
   line-height: 30px;
   width: 121px;
   height: 100px;
+  z-index: 110;
 
 }
 .header_nav_firm li a{
@@ -201,17 +203,19 @@ header{
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-bottom: 10px solid black;
-  margin-left: 55px;
   position: absolute;
-
-}
-.toogle_menu{
-  display: none;
-}
-.header_nav:first-child:hover .toogle_menu{
-
+  top: -10px;
+  left: 45px;
   display: block;
+
 }
+/*.toogle_menu{
+display: none;
+}*/
+/*.header_nav:first-child:hover .toogle_menu{
+
+display: block;
+}*/
 #section_banner{
   height: 506px;
   /*border: 1px solid red;*/
@@ -225,63 +229,118 @@ header{
 }
 .section_banner_left_arrow {
   width: 5%;
-  float: left;
   line-height: 506px;
   font-weight: 100;
   font-size: 80px;
   color: #25c9b0;
+  float: left;
+  cursor: pointer;
 
 }
 .section_banner_right_arrow{
   width: 5%;
-  float: right;
   line-height: 506px;
   font-weight: 100;
   font-size: 80px;
   color: #25c9b0;
+  float: right;
+  cursor: pointer;
 }
+
+
 .section_banner_chair{
-  float: left;
-  width: 45%;
-  height: 450px;
-  background-image: url("../images/black_chair.png");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  /*border: 1px solid red;*/
-  background-size: cover;
-  position: relative;
-  top: 60px;
+float: left;
+width: 45%;
+height: 450px;
+background-image: url("../images/black_chair.png");
+background-repeat: no-repeat;
+background-position: bottom;
+background-size: cover;
+position: relative;
+top: 60px;
+
+}
+.section_banner_chair2{
+float: left;
+width: 45%;
+height: 400px;
+background-image: url("../images/orange.png");
+background-repeat: no-repeat;
+background-position: bottom;
+background-size: cover;
+position: relative;
+top: 60px;
+
+}
+.section_banner_chair3{
+float: left;
+width: 45%;
+height: 450px;
+background-image: url("../images/black_chair.png");
+background-repeat: no-repeat;
+background-position: bottom;
+background-size: cover;
+position: relative;
+top: 60px;
 
 }
 .section_banner_txt{
-  width: 40%;
-  float: left;
-  text-align: center;
+width: 40%;
+float: left;
+text-align: center;
 }
 .section_banner_txt h1{
-  font-size: 40px;
-  font-weight: 100;
-  margin-top: 110px;
-  line-height: 50px;
+font-size: 40px;
+font-weight: 100;
+margin-top: 110px;
+line-height: 50px;
 }
 .section_banner_txt_copy{
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 25px;
-  margin: 0 30px;
+font-weight: normal;
+font-size: 14px;
+line-height: 25px;
+margin: 0 30px;
 
 }
 .section_banner_txt_btn{
+display: inline-block;
+background-color: #24ba9f;
+height: 51px;
+width: 264px;
+color: white;
+text-decoration: none;
+font-size: 20px;
+letter-spacing: 1px;
+border-radius: 5px;
+line-height: 51px;
+}
+
+/*Slider*/
+
+.slider {
   display: inline-block;
-  background-color: #24ba9f;
-  height: 51px;
-  width: 264px;
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  letter-spacing: 1px;
-  border-radius: 5px;
-  line-height: 51px;
+  width: 90%;
+  height: 506px;
+}
+
+.slider ul{
+  list-style: none;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.slider li{
+    position: absolute;
+    width: 950px;
+    height: 506px;
+    opacity: 0;
+
+    transition: opacity 1s;
+}
+.slider .visible{
+    display: inline-block;
+    opacity: 1;
 }
 
 /*SECTION PHOTO*/
@@ -301,15 +360,29 @@ header{
 .section_photo_box1 {
   background-image: url("../images/box1_img.jpg");
 }
-.section_photo_box1_title::before{
+
+/*RIP fajny beforek :/ */
+/*.section_photo_box1_title::before{
+float: left;
+content: "Chair CLAIR";
+background-color: rgba(255, 255, 255, 0.40);
+height: 62px;
+width: 329px;
+position: relative;
+top: 145px;
+line-height: 52px;
+padding-left: 17px;
+font-weight: bold;
+
+}*/
+.chair_back{
   float: left;
-  content: "Chair CLAIR";
   background-color: rgba(255, 255, 255, 0.40);
   height: 62px;
   width: 329px;
   position: relative;
-  top: 145px;
-  line-height: 52px;
+  top: 135px;
+  line-height: 48px;
   padding-left: 17px;
   font-weight: bold;
 
@@ -321,25 +394,26 @@ header{
   position: relative;
   top: 184px;
   left: 15px;
+  z-index: 100;
 }
 .section_photo_box2 {
   position: relative;
   left: 30px;
   background-image: url("../images/box2_img.jpg");
 }
-.section_photo_box2_title::before{
-  float: left;
-  content: "Chair MARGARITA";
-  background-color: rgba(255, 255, 255, 0.40);
-  height: 62px;
-  width: 329px;
-  position: relative;
-  top: 145px;
-  line-height: 52px;
-  padding-left: 17px;
-  font-weight: bold;
+/*.section_photo_box2_title::before{
+float: left;
+content: "Chair MARGARITA";
+background-color: rgba(255, 255, 255, 0.40);
+height: 62px;
+width: 329px;
+position: relative;
+top: 145px;
+line-height: 52px;
+padding-left: 17px;
+font-weight: bold;
 
-}
+}*/
 .section_photo_box3{
   float: right;
   height: 253px;
@@ -665,11 +739,14 @@ footer{
   letter-spacing: 2px;
 }
 .footer_icon{
-    position: relative;
-    top: 12px;
-    left: 350px;
+  position: relative;
+  top: 12px;
+  left: 350px;
 }
 .footer_icon img{
   display: inline-block;
   line-height: 115px;
+}
+.classHidden{
+  display: none;
 }
